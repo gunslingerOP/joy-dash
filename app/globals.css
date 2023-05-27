@@ -16,12 +16,15 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.check {
+  list-style-image: url("../public/check.png");
+}
+
+.login-bg {
+  background: rgb(226, 219, 244);
+  background: radial-gradient(
+    circle,
+    rgba(226, 219, 244, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
