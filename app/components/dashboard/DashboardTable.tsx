@@ -1,7 +1,7 @@
 import { Button, Checkbox, Table } from "@mui/joy";
 import React from "react";
-import { rows } from "../../dummyData";
-import Tag from "./tag";
+import { rows } from "../../../dummyData";
+import Tag from "../Tag";
 import Plus from "@phosphor-icons/react/dist/icons/Plus";
 
 const DashboardTable = () => {

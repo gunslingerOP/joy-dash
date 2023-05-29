@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/joy/Grid";
 
 import Image from "next/image";
@@ -7,8 +7,22 @@ import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import FormLabel from "@mui/joy/FormLabel";
 import { Envelope, Key } from "@phosphor-icons/react";
+import { redirect, useRouter } from "next/navigation";
 const logo = require("../../public/Vector.png");
-const page = () => {
+const Page = () => {
+  const { push } = useRouter();
+
+  const [loading, setLoading] = useState(false);
+
+  function handleSubmit() {
+    setLoading(true);
+
+    setTimeout(() => {
+      // NOTE: This is just to show the spinner
+      push("/home");
+    }, 1000);
+  }
+
   return (
     <div className="flex   login-bg h-screen">
       <Grid container sx={{ flexGrow: 1 }} alignItems={"stretch"}>
@@ -17,9 +31,8 @@ const page = () => {
             display: { xs: "none", md: "block" },
           }}
           sm={6}
-          className="sm:p-8  p-0 "
         >
-          <article className="  flex flex-col	justify-between		  h-full">
+          <article className=" sm:p-8  p-0 flex flex-col	justify-between		  h-full">
             <div className="flex-wrap ">
               <div className="flex gap-4 items-center">
                 <Image
@@ -52,8 +65,8 @@ const page = () => {
             </div>
           </article>
         </Grid>
-        <Grid xs={12} md={6} className="sm:p-8  p-2 bg-white  ">
-          <article className="lg:p-16 xl:p-28 2xl:48 flex-wrap flex content-center  h-full">
+        <Grid xs={12} md={6} className="   p-2 bg-white  ">
+          <article className="sm:p-8 lg:p-16 xl:p-64   flex-wrap flex content-center  h-full">
             <div className="flex-wrap md:hidden ">
               <div className="flex gap-4 items-center">
                 <Image src={logo} className="w-8" alt="Picture of the author" />
@@ -76,7 +89,7 @@ const page = () => {
                 startDecorator={<Envelope size={24} />}
                 placeholder="Enter your email address"
                 required
-                className="mb-5 bg-[#EEEFF0]"
+                className="mb-5 !bg-[#EEEFF0]"
                 type="email"
               />
 
@@ -87,7 +100,7 @@ const page = () => {
                 placeholder="Enter your password"
                 type="password"
                 required
-                className="  bg-[#EEEFF0]"
+                className="  !bg-[#EEEFF0]"
               />
               <div className="my-4">
                 <a href="#" className="text-blue-600  	">
@@ -95,9 +108,11 @@ const page = () => {
                 </a>
               </div>
               <Button
+                loading={loading}
                 type="submit"
                 className="bg-blue-600 w-full"
                 color="primary"
+                onClick={handleSubmit}
               >
                 Sign in
               </Button>
@@ -109,4 +124,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

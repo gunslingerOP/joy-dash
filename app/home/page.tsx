@@ -1,13 +1,13 @@
 "use client";
 import { Grid } from "@mui/joy";
 import React from "react";
-import DashboardProgress from "../components/DashboardProgress";
-import DashboardBarStats from "../components/DashboardBarStats";
+import DashboardProgress from "../components/dashboard/DashboardProgress";
+import DashboardBarStats from "../components/dashboard/DashboardBarStats";
 import { apps, barData, chartData } from "../../dummyData";
-import DashboardGraph from "../components/DashboardGraph";
-import DashboardDetailedBar from "../components/DashboardDetailedBar";
-import DashboardTable from "../components/DashboardTable";
-import DashboardAppList from "../components/DashboardAppList";
+import DashboardGraph from "../components/dashboard/DashboardGraph";
+import DashboardDetailedBar from "../components/dashboard/DashboardDetailedBar";
+import DashboardTable from "../components/dashboard/DashboardTable";
+import DashboardAppList from "../components/dashboard/DashboardAppList";
 
 const HomePage = () => {
   return (

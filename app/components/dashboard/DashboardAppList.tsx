@@ -1,8 +1,8 @@
 import React from "react";
-import { AppListProps } from "../types/dashboardTypes";
+import { AppListProps } from "../../types/dashboardTypes";
 import { ArrowClockwise } from "@phosphor-icons/react";
 import Image from "next/image";
-import Tag from "./tag";
+import Tag from "../Tag";
 import IconButton from "@mui/joy/IconButton";
 
 const DashboardAppList = (props: AppListProps) => {

@@ -10,7 +10,7 @@ import {
   Cell,
   ResponsiveContainer,
 } from "recharts";
-import { barData } from "../../dummyData";
+import { barData } from "../../../dummyData";
 import CapsuleBar from "./CapsuleBar";
 
 const DashboardDetailedBar = (props: { barCharData: any }) => {
