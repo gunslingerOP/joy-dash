@@ -3,18 +3,15 @@ import { Grid } from "@mui/joy";
 import React from "react";
 import DashboardProgress from "../components/DashboardProgress";
 import DashboardBarStats from "../components/DashboardBarStats";
-import { barData, chartData } from "../../dummyData";
+import { apps, barData, chartData } from "../../dummyData";
 import DashboardGraph from "../components/DashboardGraph";
 import DashboardDetailedBar from "../components/DashboardDetailedBar";
+import DashboardTable from "../components/DashboardTable";
+import DashboardAppList from "../components/DashboardAppList";
 
 const HomePage = () => {
   return (
-    <Grid
-      gridRow={20}
-      spacing={2}
-      container
-      sx={{ maxWidth: "100%", flexGrow: 1 }}
-    >
+    <Grid spacing={2} container>
       <Grid xs={4}>
         <DashboardProgress
           percent={25}
@@ -35,8 +32,8 @@ const HomePage = () => {
       <Grid xs={4}>
         <DashboardProgress
           percent={25}
-          countTitle="Total Active Users"
-          currentValue={75000}
+          countTitle="Total Downloads"
+          currentValue={2000}
           amountIncreasedToday="+3%"
           goalType="Yearly goal"
         />
@@ -47,7 +44,14 @@ const HomePage = () => {
       </Grid>
 
       <Grid xs={4}>
-        <DashboardDetailedBar />
+        <DashboardDetailedBar barCharData={barData} />
+      </Grid>
+
+      <Grid xs={8}>
+        <DashboardTable />
+      </Grid>
+      <Grid xs={4}>
+        <DashboardAppList title="Related Apps" app={apps} />
       </Grid>
     </Grid>
   );

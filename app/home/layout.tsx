@@ -7,12 +7,12 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex   h-screen">
-      <section className="    flex">
+    <div className="flex    ">
+      <section className="h-screen self-start	top-0 sticky flex   ">
         <SidebarProvider />
       </section>
 
-      <section className="px-16 mt-6">
+      <section className="px-16  my-6    ">
         <Header title="Overview" />
         {children}
       </section>

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -33,4 +32,9 @@
   border-radius: 12px;
   font-weight: 900;
   background-color: rgba(221, 241, 255, 0.4);
+}
+
+.ps-submenu-expand-icon span {
+  width: 10px;
+  height: 10px;
 }

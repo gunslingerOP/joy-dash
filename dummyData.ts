@@ -87,3 +87,50 @@ export const chartData = [
     amt: 2500,
   },
 ];
+const image = require("./public/initial.png");
+export const apps = [
+  {
+    price: "$32.0",
+    platforms: "Mac,Mobile",
+
+    name: "Notion",
+    image: image,
+  },
+  {
+    price: "$32.0",
+    platforms: "Mac,Mobile",
+
+    name: "Notion",
+    image: image,
+  },
+  {
+    price: "$32.0",
+    platforms: "Mac,Mobile",
+
+    name: "Notion",
+    image: image,
+  },
+];
+
+function createData(
+  name: string,
+  calories: number,
+  fat: string,
+  carbs: string,
+  protein: number,
+  order: number,
+  color: string
+) {
+  return { order, name, calories, fat, carbs, protein, color };
+}
+
+export const rows = [
+  createData("PAID", 159, "5 / 30 / 23", "Credit Card", 4.0, 1, "#D7F5DD"),
+  createData("PAID", 237, "5 / 30 / 23", "Credit Card", 4.3, 2, "#D7F5DD"),
+  createData("REFUNDED", 262, "5 / 30 / 23", "Credit Card", 6.0, 3, "#D7F5DD"),
+  createData("ERROR", 305, "5 / 30 / 23", "Credit Card", 4.3, 4, "#D7F5DD"),
+  createData("PAID", 356, "5 / 30 / 23", "Credit Card", 3.9, 5, "#D7F5DD"),
+  createData("ERROR", 305, "5 / 30 / 23", "Credit Card", 4.3, 4, "#D7F5DD"),
+
+  createData("ERROR", 305, "5 / 30 / 23", "Credit Card", 4.3, 4, "#D7F5DD"),
+];

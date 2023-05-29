@@ -1,5 +1,6 @@
 "use client";
 
+import IconButton from "@mui/joy/IconButton";
 import { Bell, Gear, SquaresFour } from "@phosphor-icons/react";
 import Question from "@phosphor-icons/react/dist/icons/Question";
 import Image from "next/image";
@@ -11,14 +12,28 @@ const Header = (props: { title: string }) => {
       <span className="font-semibold	text-3xl">{props.title}</span>
 
       <section className="flex-row flex">
-        <Question size={28} className="m-2" />
-        <Bell size={28} className="m-2" />
-        <Gear size={28} className="m-2" />
-        <div className="w-8 flex items-center m-2">
-          <Image className="rounded-full	" alt="profile" src={profile} />
+        <IconButton variant="plain">
+          <Question size={28} className="m-1 text-black" />
+        </IconButton>
+        <IconButton variant="plain">
+          <Bell size={28} className="m-1 text-black" />
+        </IconButton>
+        <IconButton variant="plain">
+          <Gear size={28} className="m-1 text-black" />
+        </IconButton>
+        <div className="w-8 flex items-center m-1 mr-3 ">
+          <IconButton variant="plain">
+            <Image
+              className="rounded-full text-black	"
+              alt="profile"
+              src={profile}
+            />
+          </IconButton>
         </div>
         <div className="border-l-2 flex	items-center px-1">
-          <SquaresFour size={28} />
+          <IconButton variant="plain">
+            <SquaresFour size={28} className="text-black" />
+          </IconButton>
         </div>
       </section>
     </header>

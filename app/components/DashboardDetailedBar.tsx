@@ -13,14 +13,14 @@ import {
 import { barData } from "../../dummyData";
 import CapsuleBar from "./CapsuleBar";
 
-const DashboardDetailedBar = () => {
+const DashboardDetailedBar = (props: { barCharData: any }) => {
   return (
     <div className="flex flex-col h-full border-2 py-4 px-4 rounded-xl">
       <div className="flex flex-1 justify-between flex-row">
         <span>Earnings</span>
       </div>
       <ResponsiveContainer width="100%" height={250}>
-        <BarChart className="w-full" data={barData}>
+        <BarChart className="w-full" data={props.barCharData}>
           <XAxis dataKey="name" />
           <YAxis />
           <Bar

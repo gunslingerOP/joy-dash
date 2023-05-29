@@ -12,8 +12,8 @@ import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 const logo = require("../../../public/logo_black.png");
 const SidebarProvider = () => {
   return (
-    <div className="flex-1 flex">
-      <Sidebar className="flex-1" backgroundColor="#F7F7F8">
+    <div className=" flex-1 flex">
+      <Sidebar backgroundColor="#F7F7F8">
         <Menu
           className="p-4"
           menuItemStyles={{
@@ -30,7 +30,7 @@ const SidebarProvider = () => {
               color: "#646872",
               width: "100%",
               borderRadius: "12px",
-              fontWeight: 600,
+              fontWeight: 500,
 
               textAlign: "left",
               backgroundColor: "transparent",

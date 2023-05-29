@@ -18,13 +18,13 @@ const DashboardGraph = (props: { areaChartData: any }) => {
         <span>Earnings</span>
 
         <div className="flex  rounded-lg   flex-row bg-[#EEEFF0]">
-          <button className="m-1 text-sm p-2 hover:bg-[#DDDEE0] rounded-lg">
+          <button className="m-1 text-sm px-1 hover:bg-[#DDDEE0] rounded-lg">
             1W
           </button>
-          <button className="m-1 text-sm p-2 hover:bg-[#DDDEE0] rounded-lg">
+          <button className="m-1 text-sm px-1 hover:bg-[#DDDEE0] rounded-lg">
             1M
           </button>
-          <button className="m-1  text-sm p-2 hover:bg-[#DDDEE0] rounded-lg">
+          <button className="m-1  text-sm px-1 hover:bg-[#DDDEE0] rounded-lg">
             1Y
           </button>
         </div>
