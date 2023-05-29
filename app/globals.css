@@ -28,3 +28,9 @@
     rgba(255, 255, 255, 1) 100%
   );
 }
+
+.ps-active {
+  border-radius: 12px;
+  font-weight: 900;
+  background-color: rgba(221, 241, 255, 0.4);
+}

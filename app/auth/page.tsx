@@ -5,8 +5,8 @@ import Grid from "@mui/joy/Grid";
 import Image from "next/image";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
-import { Envelope, Key } from "phosphor-react";
 import FormLabel from "@mui/joy/FormLabel";
+import { Envelope, Key } from "@phosphor-icons/react";
 const logo = require("../../public/Vector.png");
 const page = () => {
   return (
